@@ -55,5 +55,5 @@ workflows:
     jobs:
      - lint-app
      - build-docker:
-        requires: [lint-app]
-  
+          requires:
+            - lint-app
