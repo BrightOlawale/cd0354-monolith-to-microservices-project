@@ -26,3 +26,4 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push container
         run: docker push ${{ secrets.DOCKER_USERNAME }}/cd0354-monolith-to-microservices-project
+
