@@ -25,5 +25,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push container
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/cd0354-monolith-to-microservices-project
-
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-feed:v1
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-api-user:v1
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-frontend:v1
+          docker push ${{ secrets.DOCKER_USERNAME }}/udagram-reverseproxy:v1
