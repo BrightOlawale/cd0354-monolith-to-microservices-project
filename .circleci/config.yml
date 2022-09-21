@@ -51,9 +51,8 @@ jobs:
 
 
 workflows:
-  default:
+  version: 2
+  build:
     jobs:
-     - lint-app
-     - build-docker:
-          requires:
-            - lint-app
+      - lint-app
+      - build-docker
