@@ -3,12 +3,12 @@
 version: 2.1
 
 jobs:
-  list-app:
+  lint-app:
     docker:
       - image: circleci/node:13.8.0
     steps:
       -checkout
-  build-doker:
+  build-docker:
     machine: true
     steps:
       - checkout
